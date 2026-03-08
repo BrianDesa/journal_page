@@ -12,6 +12,11 @@ html{
     scroll-behavior:smooth;
 }
 
+img{
+    max-width:100%;
+    height:auto;
+}
+
 /*  GENERAL  */
 
 body{
@@ -114,7 +119,7 @@ h1,h2,h3,h4{
 }
 
 .logo img{
-    height:55px;
+    height:45px;
     margin-right:12px;
 }
 
@@ -486,4 +491,117 @@ footer{
     border-top:1px solid rgba(255,255,255,0.3);
     text-align:center;
     font-size:14px;
+}
+
+/* HAMBURGER ICON */
+
+.hamburger{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+    color:white;
+}
+
+/* MOBILE RESPONSIVE SETTINGS */
+
+@media (max-width: 768px){
+    /* NAVBAR */
+
+    .navbar{
+        padding:10px 15px;
+    }
+
+    .hamburger{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#0a2a43;
+        display: none;
+        flex-direction:column;
+        align-items:center;
+        max-height:0;
+        overflow:hidden;
+        transition:0.3s ease;
+        text-align:center;
+    }
+
+    .nav-links a{
+        padding:15px;
+        width:100%;
+        text-align:center;
+        display: block;
+        border-top:1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-links.active{
+        display: flex;
+        max-height:400px;
+    }
+
+    h1, h2, h3{
+        word-wrap:break-word;
+    }
+
+    .logo img{
+        height:40px;
+    }
+
+    .nav-title{
+        font-size:14px;
+        line-height:1.2;
+    }
+
+    /* HERO SECTION */
+
+    .hero h1{
+        font-size:26px;
+    }
+
+    .hero p{
+        font-size:16px;
+        padding:0 15px;
+    }
+
+    /* SECTION PADDING */
+
+    section{
+        padding:50px 20px;
+    }
+
+    /* EDITORIAL BOARD */
+
+    .editor-scroll{
+        gap:10px;
+        max-width:100%;
+    }
+
+    .scroll-btn{
+        width:35px;
+        height:35px;
+        font-size:18px;
+    }
+
+    .editor-member{
+        flex:0 0 100%;
+    }
+
+    /* FOOTER */
+
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+        gap:25px;
+    }
+
+    .footer-left,
+    .footer-links,
+    .footer-contact{
+        width:100%;
+    }
+
 }

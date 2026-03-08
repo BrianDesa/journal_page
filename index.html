@@ -27,8 +27,11 @@
 
         </div>
 
-        <div class="nav-links">
+        <div class="hamburger" onclick="toggleMenu()">
+        ☰
+        </div>
 
+        <div class="nav-links">
         <a href="#about">ABOUT</a>
         <a href="#aims">AIMS & SCOPE</a>
         <a href="#editorial">EDITORIAL BOARD</a>
@@ -271,6 +274,14 @@
             behavior: "smooth"
             });
             }
+        </script>
+
+        <script>
+
+            function toggleMenu(){
+            document.querySelector(".nav-links").classList.toggle("active");
+            }
+
         </script>
 
     </body>
